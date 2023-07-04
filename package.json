@@ -1,5 +1,5 @@
 {
-  "name": "vite",
+  "name": "encrypta",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "install": "^0.13.0",
     "npm": "^9.7.2",
+    "pinia": "^2.1.4",
     "vue": "^3.2.45",
     "vue-router": "^4.2.2"
   },
