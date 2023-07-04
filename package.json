@@ -5,13 +5,22 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "install": "^0.13.0",
+    "npm": "^9.7.2",
+    "vue": "^3.2.45",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "prettier": "2.8.8",
     "vite": "^4.1.0"
   }
 }

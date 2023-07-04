@@ -1,17 +1,49 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+
+const extId = "lcicffoankopigbgnballbdhgifjpnaf";
+
+const checkExtension = (id, src, callback) => {
+  let e = new Image();
+  e.src = "chrome-extension://" + id + "/" + src;
+  (e.onload = () => callback(1)), (e.onerror = () => callback(0));
+};
+
+// "src" must be included to "web_accessible_resources" in manifest.json
+// checkExtension(extId, "img.png", (installed) => {
+//   console.log({ installed });
+
+//   // if (!installed) {
+//   //   alert("Not installed :(");
+//   // }
+// });
+
+function sendOpenNew() {
+  chrome.runtime.sendMessage(extId, { action: "openNew" });
+}
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <button
+      @click="
+        () => {
+          sendOpenNew();
+        }
+      "
+    >
+      Click me
+    </button>
+  </div> -->
+  <div>
+    <router-view></router-view>
   </div>
-  <HelloWorld msg="Encrypta" />
 </template>
 
 <style scoped>
