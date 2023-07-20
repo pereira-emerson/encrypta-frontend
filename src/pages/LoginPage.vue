@@ -6,7 +6,7 @@
       >
         <div class="row">
           <!-- <img src="../assets/logo-name.svg" /> -->
-          <div class="text-h4 q-mb-md">Encrypta</div>
+          <div class="text-h4 q-mb-md">Encrypta 1</div>
         </div>
 
         <div class="row">
