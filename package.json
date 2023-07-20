@@ -1,27 +1,39 @@
 {
   "name": "encrypta",
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.0.1",
+  "description": "encrypta",
+  "productName": "encrypta",
+  "author": "Emerson Pereira <emerson.pereira@nearseatech.io>",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write"
+    "lint": "eslint --ext .js,.vue ./",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build"
   },
   "dependencies": {
-    "install": "^0.13.0",
-    "npm": "^9.7.2",
-    "pinia": "^2.1.4",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.2"
+    "@quasar/extras": "^1.16.4",
+    "@supabase/supabase-js": "^2.26.0",
+    "axios": "^1.2.1",
+    "pinia": "^2.0.11",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-vue": "^9.15.1",
-    "prettier": "2.8.8",
-    "vite": "^4.1.0"
+    "@quasar/app-vite": "^1.3.0",
+    "autoprefixer": "^10.4.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.5.1"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
   }
 }
