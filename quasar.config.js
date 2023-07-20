@@ -11,6 +11,8 @@
 const { configure } = require('quasar/wrappers');
 const path = require('node:path');
 
+require('dotenv').config();
+
 module.exports = configure(function (/* ctx */) {
   return {
     eslint: {
@@ -77,7 +79,11 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/',
       // analyze: true,
-      env: require('dotenv').config().parsed,
+      env: {
+        VITE_SUPABASE_URL: process.env.VITE_SUPABASE_URL,
+        VITE_SUPABASE_KEY: process.env.VITE_SUPABASE_KEY,
+        VITE_CHROME_EXTENSION_ID: process.env.VITE_CHROME_EXTENSION_ID,
+      },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,
